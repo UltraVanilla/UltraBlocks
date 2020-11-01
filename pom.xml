@@ -3,19 +3,19 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>net.akoot.plugins</groupId>
+    <groupId>world.ultravanilla</groupId>
     <artifactId>UltraBlocks</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
     <packaging>jar</packaging>
 
     <name>UltraBlocks</name>
 
-    <description>Interactable blocks</description>
+    <description>Add commands to blocks!</description>
     <properties>
         <java.version>11</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
-    <url>https://akoot.net/plugins/ultrablocks</url>
+    <url>https://ultravanilla.world/plugins/ultrablocks</url>
 
     <build>
         <plugins>
@@ -49,7 +49,7 @@
                 <artifactId>maven-jar-plugin</artifactId>
                 <version>2.3.1</version>
                 <configuration>
-                    <outputDirectory>testserver/plugins</outputDirectory>
+                    <outputDirectory>server/plugins</outputDirectory>
                 </configuration>
             </plugin>
         </plugins>

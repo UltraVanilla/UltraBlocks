@@ -1,4 +1,4 @@
-package net.akoot.plugins.ultrablocks;
+package world.ultravanilla.ultrablocks;
 
 import org.bukkit.Bukkit;
 import org.bukkit.Location;

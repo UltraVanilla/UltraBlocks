@@ -1,4 +1,4 @@
-package net.akoot.plugins.ultrablocks;
+package world.ultravanilla.ultrablocks;
 
 import net.md_5.bungee.api.ChatColor;
 import org.bukkit.Location;
@@ -192,16 +192,13 @@ public final class UltraBlocks extends JavaPlugin implements Listener, TabExecut
                 } else if (event.getAction() == Action.LEFT_CLICK_BLOCK) {
                     hand = Hand.LEFT;
                 }
-                activate(event.getPlayer(), event.getClickedBlock().getLocation(), hand);
-            }
-        }
-    }
-
-    private void activate(Player player, Location location, Hand hand) {
-        UltraBlock ultraBlock = getBlock(location);
-        if (ultraBlock != null) {
-            if (ultraBlock.getHand() == Hand.ANY || ultraBlock.getHand() == hand) {
-                ultraBlock.onActivate(player);
+                UltraBlock ultraBlock = getBlock(block.getLocation());
+                if (ultraBlock != null) {
+                    if (ultraBlock.getHand() == Hand.ANY || ultraBlock.getHand() == hand) {
+                        ultraBlock.onActivate(event.getPlayer());
+                        event.setCancelled(true);
+                    }
+                }
             }
         }
     }

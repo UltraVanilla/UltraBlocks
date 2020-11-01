@@ -1,4 +1,4 @@
-package net.akoot.plugins.ultrablocks;
+package world.ultravanilla.ultrablocks;
 
 public enum SenderType {
     SELF, CONSOLE

@@ -1,11 +1,11 @@
 name: UltraBlocks
 version: ${project.version}
-main: net.akoot.plugins.ultrablocks.UltraBlocks
+main: world.ultravanilla.ultrablocks.UltraBlocks
 api-version: 1.16
 prefix: UB
 authors: [ Akoot_ ]
-description: Interactable blocks
-website: https://akoot.net/plugins/ultrablocks
+description: Add commands to blocks!
+website: https://ultravanilla.world/plugins/ultrablocks
 commands:
   ultrablock:
     permission: ultrablocks.command.ultrablock
