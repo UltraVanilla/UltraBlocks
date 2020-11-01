@@ -1,0 +1,19 @@
+name: UltraBlocks
+version: ${project.version}
+main: net.akoot.plugins.ultrablocks.UltraBlocks
+api-version: 1.16
+prefix: UB
+authors: [ Akoot_ ]
+description: Interactable blocks
+website: https://akoot.net/plugins/ultrablocks
+commands:
+  ultrablock:
+    permission: ultrablocks.command.ultrablock
+    aliases: [ ub ]
+    usage: |
+      /ub create <id> <type=self|console> <mouse=left|right|any> <command-to-execute>
+      Example: /ub create some_warp warp somewhere
+      Example: /ub create some_warp tp @p 100 200 300
+
+      /ub delete <id>
+      Example: /ub delete some_warp
