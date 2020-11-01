@@ -36,7 +36,7 @@ public final class UltraBlocks extends JavaPlugin implements Listener, TabExecut
     public void onEnable() {
         // Plugin startup logic
 
-        ConfigurationSerialization.registerClass(UltraBlock.class);
+        ConfigurationSerialization.registerClass(UltraBlock.class, "UltraBlock");
         init("config.yml", false);
         reloadConfig();
 
@@ -162,6 +162,7 @@ public final class UltraBlocks extends JavaPlugin implements Listener, TabExecut
         if (args.length == 1) {
             suggestions.add("create");
             suggestions.add("delete");
+            suggestions.add("reload");
         } else if (args.length == 2) {
             if (args[0].equalsIgnoreCase("delete")) {
                 for (var block : getBlockList()) {
