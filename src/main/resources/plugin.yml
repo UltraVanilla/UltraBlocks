@@ -1,7 +1,7 @@
 name: UltraBlocks
 version: ${project.version}
 main: world.ultravanilla.ultrablocks.UltraBlocks
-api-version: 1.16
+api-version: 1.19
 prefix: UB
 authors: [ Akoot_ ]
 description: Add commands to blocks!
