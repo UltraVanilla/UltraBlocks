@@ -58,6 +58,8 @@ public final class UltraBlocks extends JavaPlugin implements Listener, TabExecut
     @Override
     public void onDisable() {
         // Plugin shutdown logic
+        store.set("blocks", getBlockList());
+        save();
     }
 
     public void loadStore() {
@@ -77,7 +79,7 @@ public final class UltraBlocks extends JavaPlugin implements Listener, TabExecut
             if (args[0].equalsIgnoreCase("delete")) {
                 if (sender instanceof Player) {
                     Player player = (Player) sender;
-                    Block block = player.getTargetBlock(3);
+                    Block block = player.getTargetBlockExact(3);
                     if (block != null) {
                         if (removeBlock(block.getLocation())) {
                             player.sendMessage(String.format("%sDeleted %sUltraBlock%s.", COLOR, COLOR_GOOD, COLOR));
@@ -111,7 +113,7 @@ public final class UltraBlocks extends JavaPlugin implements Listener, TabExecut
             if (args[0].equalsIgnoreCase("create")) {
                 if (sender instanceof Player) {
                     Player player = (Player) sender;
-                    Block block = player.getTargetBlock(3);
+                    Block block = player.getTargetBlockExact(3);
                     if (block != null) {
                         Location location = block.getLocation();
                         if (isBlock(block)) {
